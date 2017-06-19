@@ -1,0 +1,53 @@
+body{
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+table{
+	text-align: center;
+}
+.horizontal{
+
+	height: 20px;;
+	margin-right: 5xp;
+}
+.td-style{
+	background-color: #000000;
+}
+.table-no{
+	width: 20px;
+	height: 20px;
+	background-color: white;
+}
+.row{
+	align-content: center;
+}
+.col-right p {
+	margin-left: 10px;
+	margin-top: 10px;
+	font-size: 18px
+	;
+}
+.b-r{
+	background-color: greenyellow;
+}
+.col-left{
+	background-color: red;
+}
+.btn-style button{
+	
+	margin-left:40px;
+	margin-bottom: 10px;
+}
+.operate{
+	margin: 0 auto;
+	padding-left:20px;
+}
+.style-td{
+	background-color: #0080FF;
+}
+.bg{
+	background-color: blue;
+}
+.bg-yd{
+	background: hotpink;
+}

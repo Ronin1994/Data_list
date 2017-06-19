@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(e){
+	  if($(e.target).attr("class")== 1){
+		  // �������
+		  $("#set").empty();
+		  // ���ñ���ɫ
+		  if(($(e.target).css("background-color"))!="rgb(255, 255, 0)"){
+			 $(e.target).css("background-color","yellow");
+		  }
+		  // ���а�ť����
+		  var btns = $("button");
+		  var txt2 = "";
+		  var arr = new Array();
+		  for(var i=0; i<btns.length; i++){
+			  if(($(btns.eq(i)).css("background-color"))=="rgb(255, 255, 0)"){
+				  arr[i] = $(btns.eq(i)).attr("id")+"桌"+$(btns.eq(i)).text()+"座位"+"<br />";
+			  }
+		  }
+		  // ��������
+		  $("#set").append(arr);        
+	  }
+	  if($(e.target).attr("class")== 2){
+		  	var btns = $("button");
+	  		for(var i=0; i<btns.length; i++){
+			  if(($(btns.eq(i)).css("background-color"))=="rgb(255, 255, 0)"){
+				  $(btns.eq(i)).css("background-color","black");
+				  $(btns.eq(i)).attr("disabled", true); 
+				   // �������
+		  		  $("#set").empty()
+			  }
+		  }
+	  }
+	  if($(e.target).attr("class")== 3){
+	  		var btns = $("button");
+		    for(var i=0; i<btns.length; i++){
+			  if(($(btns.eq(i)).css("background-color"))=="rgb(255, 255, 0)"){
+				   $(btns.eq(i)).css("background-color","green");
+				   // �������
+		  		  $("#set").empty();
+			  }
+			}
+	  }
+  });
+});
+</script>
+</head>
+
+<body>
+<table width="200" border="1">
+  <tr>
+    <td><button id="a" class="1">1</button></td>
+    <td colspan="2" rowspan="2">&nbsp;</td>
+    <td><button id="a" class="1">2</button></td>
+  </tr>
+  <tr>
+    <td><button id="a" class="1">3</button></td>
+    <td><button id="a" class="1">4</button></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><button id="a" class="1">5</button></td>
+    <td><button id="a" class="1">6</button></td>
+    <td></td>
+  </tr>
+</table>
+	<table width="200" border="1">
+  <tr>
+    <td><button id="b" class="1">1</button></td>
+    <td colspan="2" rowspan="2">&nbsp;</td>
+    <td><button id="b" class="1">2</button></td>
+  </tr>
+  <tr>
+    <td><button id="b" class="1">3</button></td>
+    <td><button id="b" class="1">4</button></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><button id="b" class="1">5</button></td>
+    <td><button id="b" class="1">6</button></td>
+    <td></td>
+  </tr>
+</table>
+	<div id="set" border="1" width="400px" heigth="400px"></div>	
+	<button id="put" class="2">����</button>
+	<button id="get" class="3">Ԥ��</button>
+	<button id="clr" class="4">�˶�</button>
+</body>
+</html>
